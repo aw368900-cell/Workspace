@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Workspace Solutions | Google Workspace Authorized Reseller</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --g-blue: #4285F4; --g-red: #EA4335; --g-yellow: #FBBC05; --g-green: #34A853;
+            --dark: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: var(--dark); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navigation */
+        nav { padding: 20px 0; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(to right, var(--g-blue), var(--g-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Hero */
+        .hero { padding: 100px 0; text-align: center; background: radial-gradient(circle at top, rgba(66, 133, 244, 0.15), transparent); }
+        .hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -2px; }
+        .hero p { font-size: 1.25rem; color: var(--muted); max-width: 700px; margin: 0 auto 40px; }
+
+        /* Pricing Grid */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 80px; }
+        .price-card { background: var(--card); border-radius: 24px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; display: flex; flex-direction: column; }
+        .price-card:hover { transform: translateY(-10px); border-color: var(--g-blue); }
+        .price-card.featured { border: 2px solid var(--g-blue); position: relative; }
+        .price-card.featured::after { content: "MOST POPULAR"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--g-blue); padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; }
+        
+        .plan-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+        .price { font-size: 2.5rem; font-weight: 800; margin-bottom: 25px; }
+        .price span { font-size: 1rem; color: var(--muted); }
+        
+        .feat-list { list-style: none; margin-bottom: 30px; flex-grow: 1; }
+        .feat-list li { margin-bottom: 12px; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 10px; color: var(--muted); }
+        .feat-list i { color: var(--g-green); margin-top: 4px; }
+
+        .btn { display: block; text-align: center; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .btn-primary { background: var(--g-blue); color: white; }
+        .btn-outline { border: 1px solid var(--muted); color: var(--text); margin-top: 10px; }
+        .btn:hover { filter: brightness(1.2); }
+
+        /* Content Sections */
+        .info-section { padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .info-img img { width: 100%; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); }
+        .info-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Policies */
+        .policies { background: rgba(255,255,255,0.02); padding: 60px; border-radius: 32px; margin: 80px 0; }
+        .policy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .policy-item h4 { margin-bottom: 10px; color: var(--g-blue); }
+        .policy-item p { font-size: 0.85rem; color: var(--muted); }
+
+        /* Floating WA */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .info-grid, .policy-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<a href="https://wa.me/YOUR_NUMBER" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<nav>
+    <div class="container nav-flex">
+        <div class="logo">WorkSpacePro</div>
+        <div class="nav-meta" style="font-size: 0.8rem; color: var(--g-green); font-weight: 700;"><i class="fas fa-check-circle"></i> INSTANT EMAIL DELIVERY</div>
+    </div>
+</nav>
+
+<section class="hero container">
+    <h1>Scale Your Team with <br>Google Workspace.</h1>
+    <p>Get professional email, secure cloud storage, and collaboration tools. Pre-verified accounts with instant setup and 24/7 priority support.</p>
+    
+    <div class="pricing-grid">
+        <div class="price-card">
+            <div class="plan-name">Business Standard</div>
+            <div class="price">$12<span>/user/mo</span></div>
+            <ul class="feat-list">
+                <li><i class="fas fa-check"></i> Custom Business Email</li>
+                <li><i class="fas fa-check"></i> 150 participant video meetings</li>
+                <li><i class="fas fa-check"></i> 2 TB storage per user</li>
+                <li><i class="fas fa-check"></i> Security & Management controls</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Purchase Now</a>
+            <a href="https://wa.me/YOUR_NUMBER" class="btn btn-outline">WhatsApp Support</a>
+        </div>
+
+        <div class="price-card featured">
+            <div class="plan-name">Business Plus</div>
+            <div class="price">$18<span>/user/mo</span></div>
+            <ul class="feat-list">
+                <li><i class="fas fa-check"></i> eDiscovery & Retention (Vault)</li>
+                <li><i class="fas fa-check"></i> 500 participant meetings + recording</li>
+                <li><i class="fas fa-check"></i> 5 TB storage per user</li>
+                <li><i class="fas fa-check"></i> Enhanced security (Endpoint Mgmt)</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Purchase Now</a>
+            <a href="https://wa.me/YOUR_NUMBER" class="btn btn-outline">Order via WhatsApp</a>
+        </div>
+
+        <div class="price-card">
+            <div class="plan-name">Enterprise Plus</div>
+            <div class="price">$30<span>/user/mo</span></div>
+            <ul class="feat-list">
+                <li><i class="fas fa-check"></i> Advanced Noise Cancellation</li>
+                <li><i class="fas fa-check"></i> Unlimited storage potential</li>
+                <li><i class="fas fa-check"></i> DLP & Data Regions</li>
+                <li><i class="fas fa-check"></i> Premium Support Integration</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Purchase Now</a>
+        </div>
+
+        <div class="price-card">
+            <div class="plan-name">Nonprofit Edition</div>
+            <div class="price">$5<span>/admin fee</span></div>
+            <ul class="feat-list">
+                <li><i class="fas fa-check"></i> Full Workspace for Nonprofits</li>
+                <li><i class="fas fa-check"></i> Google Ad Grants eligible</li>
+                <li><i class="fas fa-check"></i> Unlimited users</li>
+                <li><i class="fas fa-check"></i> 30GB storage per user</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Purchase Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="info-section container">
+    <div class="info-grid">
+        <div class="info-text">
+            <h2>Streamline Collaboration with Premium Tools</h2>
+            <p style="color: var(--muted); margin-bottom: 20px;">Deploy a full suite of productivity tools including Gmail, Drive, Docs, and Meet. Our accounts come pre-configured for immediate use, bypassing the complex DNS verification steps for new businesses.</p>
+            <div style="display: flex; gap: 20px;">
+                <div style="text-align: center;"><i class="fas fa-bolt" style="color: var(--g-yellow); font-size: 1.5rem;"></i><br><small>Instant Setup</small></div>
+                <div style="text-align: center;"><i class="fas fa-shield-alt" style="color: var(--g-blue); font-size: 1.5rem;"></i><br><small>Admin Control</small></div>
+                <div style="text-align: center;"><i class="fas fa-sync" style="color: var(--g-green); font-size: 1.5rem;"></i><br><small>24/7 Sync</small></div>
+            </div>
+        </div>
+        <div class="info-img">
+            <img src="https://images.unsplash.com/photo-1522071823991-b1ae5e6a3048?auto=format&fit=crop&w=800&q=80" alt="Team Collaboration">
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="policies">
+        <h2 style="margin-bottom: 30px; text-align: center;">Service & Compliance Policies</h2>
+        <div class="policy-grid">
+            <div class="policy-item">
+                <h4>Delivery & Fulfillment</h4>
+                <p>Credentials (Super Admin access) are delivered via encrypted email and WhatsApp within 15 minutes of payment confirmation. All accounts include a setup guide for domain linking.</p>
+            </div>
+            <div class="policy-item">
+                <h4>Usage & Longevity</h4>
+                <p>Accounts are provided for legitimate business use. Users must adhere to Google Workspace Acceptable Use Policies. Bulk spamming or illegal activities result in immediate account termination without refund.</p>
+            </div>
+            <div class="policy-item">
+                <h4>Refund & Warranty</h4>
+                <p>We provide a 7-day functionality warranty. If the admin console is inaccessible upon delivery, a full replacement is provided. No refunds are issued once the Admin password has been changed by the buyer.</p>
+            </div>
+            <div class="policy-item">
+                <h4>Payment Security</h4>
+                <p>We accept Bitcoin, USDT, PayPal (Friends & Family), and major Credit Cards. All transactions are processed through secure, non-custodial gateways.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+        <div class="logo" style="margin-bottom: 20px;">WorkSpacePro</div>
+        <div style="display: flex; justify-content: center; gap: 20px; font-size: 1.5rem; opacity: 0.5; margin-bottom: 20px;">
+            <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-bitcoin"></i> <i class="fab fa-paypal"></i>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--muted);">&copy; 2026 WorkspacePro Solutions. Independently Operated. Google Workspace is a trademark of Google LLC.</p>
+    </div>
+</footer>
+
+</body>
+</html>
