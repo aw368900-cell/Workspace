@@ -3,77 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Workspace Hub | Business & Enterprise Solutions</title>
+    <title>Workspace Elite | Premium Google Business Solutions</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --blue: #4285F4; --red: #EA4335; --yellow: #FBBC05; --green: #34A853;
-            --dark: #111827; --gray-light: #f9fafb; --text: #374151;
+            --g-blue: #1a73e8; --g-red: #ea4335; --g-yellow: #fbbc04; --g-green: #34a853;
+            --slate-900: #0f172a; --slate-800: #1e293b; --slate-100: #f1f5f9;
+            --accent: #4f46e5;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
-        body { color: var(--text); background: #fff; line-height: 1.7; scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; background: #fff; line-height: 1.6; overflow-x: hidden; }
         
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 100px 0; }
-        
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
+        .section-padding { padding: 120px 0; }
+
         /* --- Navigation --- */
         nav { 
-            background: rgba(255,255,255,0.95); padding: 20px 0; 
-            border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; 
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.9); padding: 20px 0; 
+            border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; 
+            backdrop-filter: blur(15px);
         }
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.6rem; font-weight: 800; display: flex; gap: 5px; }
-        .logo span:nth-child(1) { color: var(--blue); }
-        .logo span:nth-child(2) { color: var(--red); }
-        .logo span:nth-child(3) { color: var(--yellow); }
-        .logo span:nth-child(4) { color: var(--green); }
+        .logo { font-size: 1.8rem; font-weight: 800; font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 8px; }
+        .logo i { color: var(--g-blue); }
 
         /* --- Hero --- */
-        .hero { padding: 120px 0 80px; text-align: center; background: radial-gradient(circle at 50% 50%, #f0f4ff 0%, #ffffff 100%); }
-        .hero h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; color: var(--dark); margin-bottom: 25px; }
-        .hero p { font-size: 1.3rem; color: #6b7280; max-width: 750px; margin: 0 auto 40px; }
-        .btn { padding: 16px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; cursor: pointer; }
-        .btn-blue { background: var(--blue); color: white; box-shadow: 0 10px 20px rgba(66, 133, 244, 0.2); }
-        .btn-blue:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(66, 133, 244, 0.3); }
+        .hero { 
+            padding: 100px 0; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); 
+            border-bottom-left-radius: 80px; border-bottom-right-radius: 80px;
+        }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 4.5rem; font-weight: 800; line-height: 1.05; color: var(--slate-900); margin-bottom: 25px; }
+        .hero p { font-size: 1.25rem; color: #475569; margin-bottom: 35px; }
 
-        /* --- Service Feature Rows (Image + Text) --- */
-        .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px; }
-        .feature-row.reverse { direction: rtl; }
-        .feature-row.reverse .text-content { direction: ltr; }
-        .feature-img img { width: 100%; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
-        .text-content h2 { font-size: 2.5rem; color: var(--dark); margin-bottom: 20px; }
-        .text-content p { font-size: 1.1rem; color: #6b7280; margin-bottom: 20px; }
+        /* --- Buttons --- */
+        .btn { padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; cursor: pointer; border: none; }
+        .btn-primary { background: var(--slate-900); color: white; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2); }
+        .btn-wa { background: #25d366; color: white; display: flex; align-items: center; gap: 10px; }
+
+        /* --- Image Text Content --- */
+        .feature-block { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; margin-bottom: 120px; }
+        .feature-block.reverse { direction: rtl; }
+        .feature-block.reverse .text-side { direction: ltr; }
+        .img-side img { width: 100%; border-radius: 40px; box-shadow: 0 40px 80px rgba(0,0,0,0.15); object-fit: cover; height: 500px; }
+        .text-side h2 { font-size: 3rem; color: var(--slate-900); margin-bottom: 20px; line-height: 1.2; }
+        .text-side p { font-size: 1.15rem; color: #64748b; margin-bottom: 25px; }
 
         /* --- Pricing Section --- */
-        .pricing-bg { background: var(--gray-light); padding: 100px 0; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
-        .price-card { background: white; padding: 40px; border-radius: 25px; border: 1px solid #e5e7eb; position: relative; transition: 0.3s; }
-        .price-card:hover { border-color: var(--blue); transform: scale(1.02); }
-        .price-card.popular { border: 2px solid var(--blue); }
-        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--blue); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
-        .plan-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
-        .price-val { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
-        .price-val span { font-size: 1rem; color: #9ca3af; }
-        .price-card ul { list-style: none; margin-bottom: 30px; }
-        .price-card ul li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
-        .price-card ul li i { color: var(--green); }
+        .pricing-section { background: var(--slate-900); color: white; border-radius: 60px; margin: 0 20px; padding: 100px 0; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px; }
+        .price-card { 
+            background: var(--slate-800); padding: 50px 40px; border-radius: 30px; 
+            border: 1px solid rgba(255,255,255,0.05); transition: 0.3s;
+            position: relative;
+        }
+        .price-card:hover { border-color: var(--g-blue); transform: scale(1.03); }
+        .price-card.featured { border: 2.5px solid var(--g-blue); }
+        .card-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--g-blue); padding: 6px 20px; border-radius: 20px; font-weight: 800; font-size: 0.8rem; }
+        
+        .price-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .price-tag { font-size: 3.5rem; font-weight: 800; margin: 20px 0; }
+        .price-tag span { font-size: 1rem; color: #94a3b8; }
+        .price-card ul { list-style: none; margin-bottom: 40px; }
+        .price-card ul li { margin-bottom: 15px; display: flex; gap: 12px; align-items: center; color: #cbd5e1; }
+        .price-card ul li i { color: var(--g-green); }
 
-        /* --- Policies Section --- */
-        .policy-box { background: var(--dark); color: white; padding: 80px; border-radius: 40px; margin-top: 50px; }
-        .policy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .policy-item h4 { color: var(--blue); margin-bottom: 15px; font-size: 1.3rem; }
-        .policy-item p { color: #9ca3af; font-size: 0.9rem; }
+        /* --- Policy Box --- */
+        .policy-section { padding: 100px 0; }
+        .policy-container { 
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; 
+            background: var(--slate-100); padding: 60px; border-radius: 40px;
+        }
+        .policy-item h4 { font-size: 1.4rem; color: var(--slate-900); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .policy-item i { color: var(--g-blue); }
 
-        /* --- WhatsApp Floating --- */
-        .wa-float { position: fixed; bottom: 40px; right: 40px; background: #25d366; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white; z-index: 9999; box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3); }
+        /* --- Floating WA --- */
+        .wa-float { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; width: 75px; height: 75px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; z-index: 1000; box-shadow: 0 15px 30px rgba(37,211,102,0.4); text-decoration: none; }
 
         @media (max-width: 968px) {
-            .hero h1 { font-size: 2.8rem; }
-            .feature-row { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-            .policy-grid { grid-template-columns: 1fr; }
+            .hero-grid, .feature-block, .policy-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+            .img-side img { height: 350px; }
         }
     </style>
 </head>
@@ -83,149 +96,141 @@
 
     <nav>
         <div class="container nav-content">
-            <div class="logo"><span>G</span><span>W</span><span>P</span><span>Resell</span></div>
-            <a href="#pricing" class="btn btn-blue" style="padding: 10px 25px;">Get Started</a>
+            <div class="logo"><i class="fas fa-layer-group"></i> Workspace<span>Elite</span></div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--g-green);"><i class="fas fa-circle"></i> SYSTEM ONLINE</span>
+                <a href="#pricing" class="btn btn-primary" style="padding: 12px 25px;">Buy Now</a>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <h1>Business tools to help you <br><span style="color:var(--blue)">work smarter</span> together.</h1>
-            <p>Ready-to-use Google Workspace Business & Enterprise accounts. No setup hassle, instant delivery, and professional support for your growing team.</p>
-            <div style="display: flex; gap: 20px; justify-content: center;">
-                <a href="#pricing" class="btn btn-blue">Explore Plans</a>
-                <a href="#features" class="btn" style="border: 2px solid #eee;">How it Works</a>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span style="letter-spacing: 2px; font-weight: 800; color: var(--g-blue); text-transform: uppercase; font-size: 0.9rem;">Global Business Reseller</span>
+                <h1>Powerful Workspace Accounts. <span style="color:var(--g-blue)">Instant.</span></h1>
+                <p>Deploy professional business infrastructure in minutes. We provide pre-verified, fully activated Google Workspace accounts for Business, Plus, and Nonprofit organizations.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#pricing" class="btn btn-primary">View Plans</a>
+                    <a href="https://wa.me/YOUR_NUMBER" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat Support</a>
+                </div>
+            </div>
+            <div class="img-side">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Professional Workspace">
             </div>
         </div>
     </header>
 
-    <section class="section-padding container" id="features">
-        <div class="feature-row">
-            <div class="feature-img">
-                <img src="https://images.unsplash.com/photo-1573161559521-450228322541?auto=format&fit=crop&w=800&q=80" alt="Team Meeting">
+    <section class="section-padding container">
+        <div class="feature-block">
+            <div class="img-side">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Office Infrastructure">
             </div>
-            <div class="text-content">
-                <h2>Business Plus & Enterprise</h2>
-                <p>Unlock the most powerful versions of Google Workspace. With the Business Plus and Enterprise Plus plans, you get massive cloud storage (up to 5TB or unlimited), advanced security, and eDiscovery for your business emails.</p>
-                <p>Perfect for companies that need high-level compliance, data regions, and advanced endpoint management without the wait time of official verification.</p>
-                <a href="#pricing" style="color: var(--blue); font-weight: 700; text-decoration: none;">View Plan Details →</a>
-            </div>
-        </div>
-
-        <div class="feature-row reverse">
-            <div class="feature-img">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Nonprofit team">
-            </div>
-            <div class="text-content">
-                <h2>Nonprofit Specialized Accounts</h2>
-                <p>Are you a registered NGO or a small group? Our Nonprofit accounts provide the essential Google Workspace experience at a fraction of the cost. Get professional @yourdomain emails and full access to Google Drive and Meet.</p>
-                <p>These accounts are pre-approved and ready to use, so you can focus on your mission while we handle the technical infrastructure.</p>
+            <div class="text-side">
+                <h2>Business-Ready <br>Administrative Access</h2>
+                <p>Gain full Super Admin control over your organization. Our accounts come ready for domain linking, user creation, and advanced security configuration. No waiting for verification—start working immediately.</p>
+                <ul style="list-style: none; margin-bottom: 30px;">
+                    <li><i class="fas fa-check-circle" style="color:var(--g-blue)"></i> Full Super Admin Credentials</li>
+                    <li><i class="fas fa-check-circle" style="color:var(--g-blue)"></i> Pre-Verified Billing Profiles</li>
+                    <li><i class="fas fa-check-circle" style="color:var(--g-blue)"></i> Global Region Availability</li>
+                </ul>
             </div>
         </div>
 
-        <div class="feature-row">
-            <div class="feature-img">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Cloud Data">
+        <div class="feature-block reverse">
+            <div class="img-side">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Secure Data Center">
             </div>
-            <div class="text-content">
-                <h2>Instant Global Delivery</h2>
-                <p>We know business doesn't wait. That's why we delivery 24/7. Once your payment is confirmed, you receive your Super Admin credentials via Email and WhatsApp immediately.</p>
-                <p>Login, add your users, and start collaborating in seconds. We accept all payment methods including PayPal, Stripe, and Crypto.</p>
+            <div class="text-side">
+                <h2>High-Limit Cloud <br>Storage Solutions</h2>
+                <p>Stop worrying about storage limits. Our Business Plus and Enterprise accounts provide massive drive space (2TB to Unlimited) and advanced meeting tools like noise cancellation and recording.</p>
+                <p>Perfect for media agencies, developers, and data-heavy enterprises looking for a stable and cost-effective cloud environment.</p>
             </div>
         </div>
     </section>
 
-    <section class="pricing-bg" id="pricing">
+    <section class="pricing-section" id="pricing">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 3rem;">Flexible Plans for Every Team</h2>
-                <p>Select the tier that matches your required storage and security.</p>
+            <div style="text-align: center;">
+                <h2 style="font-size: 3.5rem;">The Right Plan for Your Vision</h2>
+                <p style="color: #94a3b8; font-size: 1.2rem;">All accounts delivered via Email & WhatsApp instantly.</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="price-card">
-                    <div class="plan-title">Business</div>
-                    <div class="price-val">$15 <span>/mo</span></div>
+                    <h3>Business Standard</h3>
+                    <div class="price-tag">$40 <span>/account</span></div>
                     <ul>
-                        <li><i class="fas fa-check"></i> Custom Business Email</li>
-                        <li><i class="fas fa-check"></i> 2 TB Cloud Storage</li>
-                        <li><i class="fas fa-check"></i> 150 participant meetings</li>
-                        <li><i class="fas fa-check"></i> Admin Security Controls</li>
+                        <li><i class="fas fa-check"></i> Super Admin Access</li>
+                        <li><i class="fas fa-check"></i> 2 TB Storage per User</li>
+                        <li><i class="fas fa-check"></i> 150 Participant Meetings</li>
+                        <li><i class="fas fa-check"></i> Standard Support</li>
                     </ul>
-                    <a href="#" class="btn btn-blue" style="width: 100%;">Buy Business</a>
+                    <a href="YOUR_PAYMENT_LINK" class="btn btn-primary" style="width: 100%; background: var(--g-blue);">Buy Account</a>
                 </div>
 
-                <div class="price-card popular">
-                    <div class="badge">BEST VALUE</div>
-                    <div class="plan-title">Business Plus</div>
-                    <div class="price-val">$25 <span>/mo</span></div>
+                <div class="price-card featured">
+                    <div class="card-badge">RECOMMENDED</div>
+                    <h3>Business Plus</h3>
+                    <div class="price-tag">$45 <span>/account</span></div>
                     <ul>
-                        <li><i class="fas fa-check"></i> 5 TB Cloud Storage</li>
-                        <li><i class="fas fa-check"></i> 500 participant meetings</li>
-                        <li><i class="fas fa-check"></i> Enhanced Security & Vault</li>
-                        <li><i class="fas fa-check"></i> Endpoint Management</li>
+                        <li><i class="fas fa-check"></i> Advanced Admin Control</li>
+                        <li><i class="fas fa-check"></i> 5 TB Storage per User</li>
+                        <li><i class="fas fa-check"></i> 500 Participant Meetings</li>
+                        <li><i class="fas fa-check"></i> Vault & eDiscovery</li>
                     </ul>
-                    <a href="#" class="btn btn-blue" style="width: 100%;">Buy Plus</a>
-                </div>
-
-                <div class="price-card">
-                    <div class="plan-title">Enterprise Plus</div>
-                    <div class="price-val">$45 <span>/mo</span></div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Unlimited Storage (Eligible)</li>
-                        <li><i class="fas fa-check"></i> Data Loss Prevention (DLP)</li>
-                        <li><i class="fas fa-check"></i> Enterprise Endpoint Mgmt</li>
-                        <li><i class="fas fa-check"></i> Priority Reseller Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-blue" style="width: 100%;">Buy Enterprise</a>
+                    <a href="YOUR_PAYMENT_LINK" class="btn btn-primary" style="width: 100%; background: white; color: var(--slate-900);">Buy Account</a>
                 </div>
 
                 <div class="price-card">
-                    <div class="plan-title">Nonprofit</div>
-                    <div class="price-val">$10 <span>/setup</span></div>
+                    <h3>Nonprofit Super Admin</h3>
+                    <div class="price-tag">$60 <span>/account</span></div>
                     <ul>
-                        <li><i class="fas fa-check"></i> Google for Nonprofits</li>
-                        <li><i class="fas fa-check"></i> Standard @domain Email</li>
-                        <li><i class="fas fa-check"></i> 30 GB Storage per user</li>
                         <li><i class="fas fa-check"></i> Pre-Approved Status</li>
+                        <li><i class="fas fa-check"></i> Unlimited User Support</li>
+                        <li><i class="fas fa-check"></i> Full Nonprofit Suite</li>
+                        <li><i class="fas fa-check"></i> Lifetime Admin Access</li>
                     </ul>
-                    <a href="#" class="btn btn-blue" style="width: 100%;">Buy Nonprofit</a>
+                    <a href="YOUR_PAYMENT_LINK" class="btn btn-primary" style="width: 100%; background: var(--g-green);">Buy Account</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="opacity: 0.6;">Accepted: Crypto (USDT/BTC), PayPal, Cards, Local Bank Transfer</p>
+                <div style="font-size: 2rem; margin-top: 15px; opacity: 0.4; display: flex; justify-content: center; gap: 20px;">
+                    <i class="fab fa-bitcoin"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-paypal"></i> <i class="fab fa-ethereum"></i>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section-padding container">
-        <div class="policy-box">
-            <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Terms & Service Policies</h2>
-            <div class="policy-grid">
-                <div class="policy-item">
-                    <h4><i class="fas fa-truck-fast"></i> Delivery Protocol</h4>
-                    <p>All Google Workspace Super Admin accounts are delivered instantly upon payment confirmation. You will receive an email containing the primary login, recovery email, and temporary password. Delivery is also mirrored to your WhatsApp for security redundancy.</p>
-                </div>
-                <div class="policy-item">
-                    <h4><i class="fas fa-shield-halved"></i> Replacement Warranty</h4>
-                    <p>We provide a 30-day "No-Questions-Asked" replacement warranty. If your account faces any administrative issues or credential errors during the first month, we will provide a fresh account at no extra cost.</p>
-                </div>
-                <div class="policy-item">
-                    <h4><i class="fas fa-user-lock"></i> Usage Policy</h4>
-                    <p>Accounts are provided for legitimate business use only. Using these accounts for bulk spamming, phishing, or violating Google's global TOS is strictly prohibited and will void your warranty immediately.</p>
-                </div>
-                <div class="policy-item">
-                    <h4><i class="fas fa-credit-card"></i> Payment Methods</h4>
-                    <p>We prioritize security. We accept all major Credit Cards, PayPal (Invoicing), and Cryptocurrencies (USDT, BTC, ETH). All transactions are encrypted and processed through verified payment gateways.</p>
-                </div>
+        <h2 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem;">Policies & Guarantee</h2>
+        <div class="policy-container">
+            <div class="policy-item">
+                <h4><i class="fas fa-shipping-fast"></i> Instant Fulfillment</h4>
+                <p>Our delivery is 100% automated. Within 2-5 minutes of payment confirmation, your Super Admin credentials (email, password, and secondary verification methods) are sent to your provided email and WhatsApp.</p>
+            </div>
+            <div class="policy-item">
+                <h4><i class="fas fa-shield-alt"></i> Replacement Warranty</h4>
+                <p>We provide a 30-day structural warranty. If your account faces login or billing verification issues due to our setup, we replace the account within 24 hours. Your satisfaction and uptime are our priority.</p>
+            </div>
+            <div class="policy-item">
+                <h4><i class="fas fa-user-secret"></i> Usage & Privacy</h4>
+                <p>We respect your data privacy. Once delivered, you are encouraged to change the Super Admin password and recovery details. We do not store or track your business activities after the transfer.</p>
+            </div>
+            <div class="policy-item">
+                <h4><i class="fas fa-headset"></i> Dedicated Support</h4>
+                <p>Unlike standard resellers, we offer live WhatsApp support for all setup questions. Whether you're linking a domain or configuring MX records, our team is here to assist you.</p>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 80px 0; border-top: 1px solid #eee; text-align: center;">
+    <footer style="padding: 60px 0; background: #080a0f; color: white; text-align: center;">
         <div class="container">
-            <div class="logo" style="justify-content: center; margin-bottom: 30px;"><span>G</span><span>W</span><span>P</span><span>Resell</span></div>
-            <div style="font-size: 2.5rem; display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; opacity: 0.3;">
-                <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-stripe"></i> <i class="fab fa-bitcoin"></i> <i class="fab fa-paypal"></i>
-            </div>
-            <p style="color: #9ca3af; font-size: 0.9rem;">&copy; 2026 GWPResell Solutions. All rights reserved. Google Workspace is a registered trademark of Google LLC.</p>
+            <div class="logo" style="justify-content: center; margin-bottom: 25px;"><i class="fas fa-layer-group"></i> WorkspaceElite</div>
+            <p style="color: #64748b; font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Disclaimer: We are an independent provider of Google Workspace administrative accounts. Google Workspace is a registered trademark of Google LLC.</p>
+            <p style="margin-top: 20px;">&copy; 2026 WorkspaceElite Solutions. All Rights Reserved.</p>
         </div>
     </footer>
 
